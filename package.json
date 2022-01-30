@@ -14,5 +14,18 @@
         "UI",
         "UX"
     ],
-    "_id": "Portfolio@0.0.1"
+    "main": "tailwindcss.config.js",
+    "scripts": {
+        "build": "npx tailwindcss -i index.css -o main.css -w",
+        "prepare": "husky install"
+    },
+    "_id": "Portfolio@0.0.1",
+    "devDependencies": {
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.2",
+        "prettier": "^2.5.1"
+    },
+    "lint-staged": {
+        "*.{js,css,md,css}": "prettier --write"
+    }
 }
