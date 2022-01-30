@@ -1,0 +1,18 @@
+{
+    "name": "personal-portfolio",
+    "version": "0.0.1",
+    "private": false,
+    "author": "Mahamdi Amine",
+    "licence": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MahamdiAmine/personal-portfolio.git"
+    },
+    "keywords": [
+        "portfolio",
+        "tailwindcss",
+        "UI",
+        "UX"
+    ],
+    "_id": "Portfolio@0.0.1"
+}
