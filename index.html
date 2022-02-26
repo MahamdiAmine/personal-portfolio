@@ -21,12 +21,12 @@
     <div class='text-lg font-bold'>Mahamdi Mohammed &#128187;</div>
     <div class='hidden md:flex space-x-12 items-center'>
       <a href='#' class='text-selected-text'>Home</a>
-      <a href='#about'>About Me</a>
+      <!--      <a class='hover:text-xl' href='#about'>About Me</a>-->
       <a href='#work'>My Work</a>
-      <a href='#experience'>My Experience</a>
-      <a href='#hire'>
-        <button class='px-6 py-2 bg-theme font-bold'>Hire me</button>
-      </a>
+      <!--      <a class='hover:text-xl' href='#experience'>My Experience</a>-->
+      <!--      <a class='hover:text-xl' href='#hire'>-->
+      <!--        <button class='px-6 py-2 bg-theme font-bold'>Hire me</button>-->
+      <!--      </a>-->
     </div>
     <div class='md:hidden'>
       <svg width='26' height='18' viewBox='0 0 26 18'
@@ -60,7 +60,74 @@
         </a>
       </div>
     </nav>
+
+    <!--    hero section-->
+    <div class='flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36'>
+      <!--      title-->
+      <h1 class='font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left'>
+        Computer science engineer.
+      </h1>
+      <div class='w-full flex justify-center md:justify-start'>
+        <button class='px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3'>
+          <svg width='22' height='22' xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none'
+               viewBox='0 0 24 24' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2'
+                  d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1' />
+          </svg>
+          <span>Github Repo</span>
+        </button>
+      </div>
+    </div>
+    <img src='assets/pic.png' alt='Man' class='bg-transparent w-2/5 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1'>
   </div>
 </div>
+
+<!-- work -->
+<div class='container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full'>
+  <section class='w-full'>
+    <h2 id='work' class='secondary-title'>My work</h2>
+    <p class='section-paragraph'>I’ve had the pleasure of working with multiple Fortune 500 companies, designing and
+      implementing both frontend and backend.</p>
+
+    <div class='space-y-12 my-16'>
+      <div
+        class='w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap'>
+
+        <div class='flex flex-wrap justify-center text-center lg:text-left lg:block'>
+          <h3 class='text-white text-3xl font-semibold'>AWID Dataset network anomaly detection and attack classification
+            ML</h3>
+
+          <div class='w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8'>
+            <div class='badge'>Python</div>
+            <div class='badge'>Jupyter Notebook</div>
+            <div class='badge'>R</div>
+          </div>
+          <p class='text-secondary'>a machine learning tool for the anomalies detection inside Iot networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function updateList() {
+    const titles = [...document.querySelectorAll('h1, h2')].sort((a, b) => {
+      return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top)
+    })
+
+    console.log('titles')
+    console.log(titles)
+
+    document.querySelectorAll('.selected-circle').forEach(c => c.classList.remove('selected-circle'))
+
+    document.querySelectorAll('.nav-dot')[[...document.querySelectorAll('h1, h2')].indexOf(titles[0])].classList.add('selected-circle')
+  }
+
+  updateList()
+  window.addEventListener('scroll', () => {
+    updateList()
+  })
+</script>
+
 </body>
 </html>
